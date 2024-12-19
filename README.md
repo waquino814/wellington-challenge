@@ -14,3 +14,5 @@ Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 The page will reload if you make edits.\
 You will also see any lint errors in the console.
 
+### node_modules
+node_modules should allways be excluded from github, they were left in this particular case becasue the requirement says it should only call yarn start
