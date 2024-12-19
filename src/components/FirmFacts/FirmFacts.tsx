@@ -1,3 +1,4 @@
+// src/components/FirmFacts/FirmFacts.tsx
 import React from 'react';
 import FirmFactCard from '../FirmFactCard/FirmFactCard';
 import './FirmFacts.scss';
@@ -16,9 +17,9 @@ const FirmFacts: React.FC = () => {
     { variant: 'default', buttonText: 'This is a two line button that terminates with ...', icon: true },
     { variant: 'border', buttonText: 'This is a one line button', icon: false },
     { variant: 'border', buttonText: 'This is a two line button that terminates with ...', icon: true },
-    { variant: 'border', buttonText: 'This is a two line button that terminates with ...', icon: true, text:"inital" },
-    { variant: 'border', buttonText: 'This is a two line button that terminates with ...', icon: true, disabledButton: true , text:"disabled" },
-    { variant: 'border', buttonText: 'This is a two line button that terminates with ...', icon: true, text:"hover" },
+    { variant: 'border', buttonText: 'This is a two line button that terminates with ...', icon: true, text: "initial" },
+    { variant: 'border', buttonText: 'This is a two line button that terminates with ...', icon: true, disabledButton: true, text: "disabled" },
+    { variant: 'border', buttonText: 'This is a two line button that terminates with ...', icon: true, text: "hover" },
   ];
 
   return (
