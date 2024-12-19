@@ -1,0 +1,53 @@
+/* src/components/FirmFactCard/FirmFactCard.scss */
+
+.firmFactCard {
+    background-color: #f1f1f1;
+    padding: 1.25rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    transition: border-color 0.3s ease, background-color 0.3s ease;
+    cursor: pointer;
+    height: 100%;
+    position: relative;
+    font-size: 1rem; /* Base font size */
+  
+    /* For the default variant */
+    &.default {
+        border: 0.125rem solid #dcdcdc;
+        &:hover {
+            background-color: #58c86b;
+        }
+    }
+  
+    /* For the border variant */
+    &.border {
+        border: 0.125rem solid #dcdcdc;
+        &:hover {
+            border-color: #58c86b;
+        }
+    }
+  
+    /* Center content */
+    .card-content {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+/* Responsive media query */
+@media (max-width: 1680px) {
+    .firmFactCard {
+        font-size: 1.125rem;
+        padding: 1rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .firmFactCard {
+        font-size: 1rem;
+        padding: 0.75rem;
+    }
+}
