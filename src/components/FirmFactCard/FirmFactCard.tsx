@@ -12,12 +12,11 @@ interface FirmFactCardProps {
 }
 
 const FirmFactCard: React.FC<FirmFactCardProps> = ({ text, variant, buttonText, icon, isTwoLine, disabledButton }) => {
-    console.log('disabledButton', disabledButton);
   return (
     <div className={`firmFactCard ${variant}`}>
       <div className="card-content">
         <Button text={buttonText} icon={icon} isTwoLine={isTwoLine} disabled={disabledButton}/>
-        <p>{text}</p>
+        {text && <div className="card-text">{text}</div>} {/* Centered text below button */}
       </div>
     </div>
   );

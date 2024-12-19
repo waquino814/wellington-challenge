@@ -7,31 +7,43 @@
     justify-content: center;
     align-items: center;
     text-align: center;
-    transition: border-color 0.3s ease, background-color 0.3s ease, color 0.3s ease;
+    transition: border-color 0.3s ease, background-color 0.3s ease;
     cursor: pointer;
     height: 100%;
     position: relative;
-    font-size: 1rem;
-
+  
     &.default {
-        border: 0.125rem solid #dcdcdc;
-        &:hover {
-            background-color: #58c86b;
-            border-color: #58c86b;
-        }
+      border: 0.125rem solid #dcdcdc;
+      &:hover {
+        background-color: #58c86b;
+      }
     }
-
+  
     &.border {
-        border: 0.125rem solid #dcdcdc;
-        &:hover {
-            border-color: #58c86b;
-            border-width: 0.5rem;
-        }
+      border: 0.125rem solid #dcdcdc;
+      &:hover {
+        border-color: #58c86b;
+        border-width: 0.50rem;
+      }
     }
-
+  
     .card-content {
-        display: flex;
-        justify-content: center;
-        align-items: center;
+      display: flex;
+      flex-direction: column; /* Stack button and text vertically */
+      align-items: center; /* Center items */
+      justify-content: center;
     }
-}
+  
+    .button {
+      margin-bottom: 0.625rem; /* Space between button and text */
+    }
+  
+    .card-text {
+      font-size: 1rem; /* Adjust font size */
+      color: #333;
+      text-align: center; /* Ensure text is centered */
+      line-height: 1.5;
+      max-width: 90%; /* Optional: Limit text width for better layout */
+    }
+  }
+  

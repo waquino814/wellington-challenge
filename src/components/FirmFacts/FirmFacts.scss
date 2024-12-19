@@ -1,105 +1,111 @@
-/* src/components/FirmFacts/FirmFacts.scss */
-
 .firmFacts-wrapper {
     width: 100%;
-    max-width: 105rem; /* 1680px */
-    min-width: 48rem;  /* 768px */
-    height: auto;
+    max-width: 105rem;
+    min-width: 48rem;
     margin: 0 auto;
-    position: relative;
-    padding: 1.25rem;
+    padding: 4rem;
     background-color: rgb(45, 62, 78);
     transition: background-color 0.3s ease, border-color 0.3s ease;
-    position: absolute;
-    top: 100px; /* Positioned 100px from the top */
-    left: 50%;
-    transform: translateX(-50%);
-  }
-  
-  .firmFacts-title {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    font-size: 1.5rem;
-    padding-bottom: 0.625rem;
-    border-bottom: 0.125rem solid #ccc;
-    margin-bottom: 1.25rem;
+    position: relative;
+    box-sizing: border-box;
+}
+
+.firmFacts-title {
+    font-size: 2rem; /* Make the title larger */
+    padding-bottom: 1rem;
+    border-bottom: 2px solid #ccc;
+    margin-bottom: 2rem;
     color: #fff;
     transition: color 0.3s ease, border-color 0.3s ease;
-  }
-  
-  .firmFacts {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: auto auto;
-    grid-gap: 1.25rem;
-    grid-template-areas:
-      "main-card card2 card3 card4"
-      "main-card card5 card6 card7";
-    transition: grid-template-columns 0.3s ease, grid-template-rows 0.3s ease;
-  }
-  
-  .firmFacts .firmFactCard:nth-child(1) {
-    grid-row: span 2;
-    grid-column: 1;
-  }
-  
-  .firmFacts .firmFactCard:nth-child(n+2) {
-    grid-column: span 1;
-  }
-  
-  .close-button {
+    text-align: left; /* Center the title horizontally */
+    position: relative; /* Position context for the close button */
+}
+
+.close-button {
+    position: absolute; /* Move the close button */
+    top: 0; /* Align to the top */
+    right: 0; /* Align to the right */
     background: transparent;
     border: none;
     cursor: pointer;
-    font-size: 1.5rem;
+    font-size: 2rem; /* Increase size for visibility */
     color: white;
     transition: color 0.3s ease;
-  }
-  
-  @media (max-width: 1680px) {
+}
+
+.firmFacts {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-auto-rows: 1fr;
+    grid-gap: 1rem;
+    grid-template-areas:
+        "main-card card2 card3 card4"
+        "main-card card5 card6 card7";
+    justify-items: stretch;
+    align-items: stretch;
+}
+
+.firmFacts .firmFactCard {
+    padding: 1rem;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #f1f1f1;
+    position: relative;
+    aspect-ratio: 1;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.firmFacts .firmFactCard:nth-child(1) {
+    grid-row: span 2;
+    grid-column: 1;
+    aspect-ratio: auto;
+    height: 100%;
+}
+
+@media (max-width: 1680px) {
     .firmFacts-wrapper {
-      max-width: 100%;
-      padding: 1.125rem;
+        padding: 1.5rem;
     }
-  
+
     .firmFacts-title {
-      font-size: 1.25rem;
+        font-size: 1.75rem;
     }
-  
+
     .firmFacts {
-      grid-template-columns: repeat(3, 1fr);
-      grid-template-rows: auto;
-      grid-template-areas:
-        "main-card card2 card3"
-        "main-card card5 card7";
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-areas:
+            "main-card card2 card3"
+            "main-card card5 card7";
     }
-  }
-  
-  @media (max-width: 768px) {
+}
+
+@media (max-width: 768px) {
     .firmFacts-wrapper {
-      padding: 1rem;
+        padding: 1rem;
     }
-  
+
     .firmFacts-title {
-      font-size: 1rem;
+        font-size: 1.5rem;
+        margin-bottom: 1rem;
     }
-  
+
     .firmFacts {
-      grid-template-columns: 1fr;
-      grid-template-rows: auto;
-      grid-template-areas:
-        "main-card"
-        "card2"
-        "card3"
-        "card4"
-        "card5"
-        "card6"
-        "card7";
+        grid-template-columns: 1fr;
+        grid-template-areas:
+            "main-card"
+            "card2"
+            "card3"
+            "card4"
+            "card5"
+            "card6"
+            "card7";
+        grid-gap: 1.5rem;
     }
-  
+
     .close-button {
-      font-size: 1.25rem;
+        font-size: 1.5rem;
     }
-  }
-  
+}
