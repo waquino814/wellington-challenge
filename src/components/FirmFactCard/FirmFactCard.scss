@@ -7,47 +7,31 @@
     justify-content: center;
     align-items: center;
     text-align: center;
-    transition: border-color 0.3s ease, background-color 0.3s ease;
+    transition: border-color 0.3s ease, background-color 0.3s ease, color 0.3s ease;
     cursor: pointer;
     height: 100%;
     position: relative;
-    font-size: 1rem; /* Base font size */
-  
-    /* For the default variant */
+    font-size: 1rem;
+
     &.default {
         border: 0.125rem solid #dcdcdc;
         &:hover {
             background-color: #58c86b;
+            border-color: #58c86b;
         }
     }
-  
-    /* For the border variant */
+
     &.border {
         border: 0.125rem solid #dcdcdc;
         &:hover {
             border-color: #58c86b;
+            border-width: 0.5rem;
         }
     }
-  
-    /* Center content */
+
     .card-content {
         display: flex;
         justify-content: center;
         align-items: center;
-    }
-}
-
-/* Responsive media query */
-@media (max-width: 1680px) {
-    .firmFactCard {
-        font-size: 1.125rem;
-        padding: 1rem;
-    }
-}
-
-@media (max-width: 768px) {
-    .firmFactCard {
-        font-size: 1rem;
-        padding: 0.75rem;
     }
 }

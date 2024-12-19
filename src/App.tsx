@@ -1,6 +1,5 @@
-// src/App.tsx
 import React from 'react';
-import './App.scss'; // Import global styles if you have any, for example body styles
+import './App.scss'; 
 import FirmFacts from './components/FirmFacts/FirmFacts';
 
 const App: React.FC = () => {

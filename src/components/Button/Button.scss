@@ -1,78 +1,58 @@
 /* src/components/Button/Button.scss */
 
 .button {
-    padding: 0.75rem 1.5rem;
-    background-color: rgb(45, 62, 78); /* Default background color */
-    color: white;
-    border: none;
-    border-radius: 1.25rem;
-    cursor: pointer;
-    white-space: normal;
+  padding: 0.75rem 1.5rem;
+  background-color: rgb(45, 62, 78);
+  color: white;
+  border: none;
+  border-radius: 1.25rem;
+  cursor: pointer;
+  white-space: normal;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  width: auto;
+
+  &.two-line {
+    height: auto;
+    min-height: 5rem;
+    padding: 1rem 2rem;
+  }
+
+  &:hover {
+    background-color: rgb(58, 192, 106);
+  }
+
+  &:disabled {
+    background-color: rgb(217, 217, 217);
+    cursor: not-allowed;
+    color: #999;
+  }
+
+  &.icon {
+    display: flex;
+    align-items: center;
+    width: 100%; 
+
+    .icon {
+      font-size: 1.25rem;
+    }
+
+    .button-text {
+      margin-left: 0.625rem;
+      text-align: left;
+      word-wrap: break-word;
+      flex-grow: 1;
+      line-height: 1.2;
+    }
+  }
+
+  &.default {
+    white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
-    transition: background-color 0.3s ease, color 0.3s ease;
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    width: auto;
-  
-    /* When the button has two lines, increase the height */
-    &.two-line {
-      height: auto;
-      min-height: 5rem; /* Minimum height for two-line buttons */
-      padding: 1rem 2rem;
-    }
-
-    /* Hover effect */
-    &:hover {
-      background-color: rgb(58, 192, 106);
-    }
-  
-    /* Disabled button */
-    &:disabled {
-      background-color: rgb(217, 217, 217);
-      cursor: not-allowed;
-      color: #999;
-    }
-  
-    /* For icon buttons with text and an icon */
-    &.icon {
-      display: flex;
-      align-items: center;
-      width: 100%; /* Ensure full width for the button */
-      
-      .icon {
-        font-size: 1.25rem;
-      }
-  
-      .button-text {
-        margin-left: 0.625rem; /* Reduced space between icon and text */
-        text-align: left;
-        word-wrap: break-word;
-        flex-grow: 1;
-        line-height: 1.2;
-      }
-    }
-
-    /* For the default button, no text wrap */
-    &.default {
-      white-space: nowrap;
-      overflow: hidden;
-      text-overflow: ellipsis;
-    }
-}
-
-/* Responsive media query */
-@media (max-width: 1680px) {
-    .button {
-        padding: 1rem 2rem;
-        font-size: 1rem;
-    }
-}
-
-@media (max-width: 768px) {
-    .button {
-        padding: 0.5rem 1rem;
-        font-size: 0.875rem;
-    }
+  }
 }

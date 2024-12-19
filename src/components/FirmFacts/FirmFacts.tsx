@@ -1,4 +1,3 @@
-// src/components/FirmFacts/FirmFacts.tsx
 import React from 'react';
 import FirmFactCard from '../FirmFactCard/FirmFactCard';
 import './FirmFacts.scss';
@@ -12,7 +11,6 @@ interface Card {
 }
 
 const FirmFacts: React.FC = () => {
-  // Data for cards, defining variant, text, and icon visibility
   const cards: Card[] = [
     { variant: 'border', buttonText: 'This is a two line button that terminates with ...', icon: true },
     { variant: 'default', buttonText: 'This is a two line button that terminates with ...', icon: true },
