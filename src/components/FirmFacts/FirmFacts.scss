@@ -11,24 +11,24 @@
 }
 
 .firmFacts-title {
-    font-size: 2rem; /* Make the title larger */
+    font-size: 2rem; 
     padding-bottom: 1rem;
-    border-bottom: 2px solid #ccc;
+    border-bottom: 0.125rem solid #ccc; 
     margin-bottom: 2rem;
     color: #fff;
     transition: color 0.3s ease, border-color 0.3s ease;
-    text-align: left; /* Center the title horizontally */
-    position: relative; /* Position context for the close button */
+    text-align: left;
+    position: relative;
 }
 
 .close-button {
-    position: absolute; /* Move the close button */
-    top: 0; /* Align to the top */
-    right: 0; /* Align to the right */
+    position: absolute;
+    top: 0;
+    right: 0;
     background: transparent;
     border: none;
     cursor: pointer;
-    font-size: 2rem; /* Increase size for visibility */
+    font-size: 2rem;
     color: white;
     transition: color 0.3s ease;
 }
@@ -46,7 +46,7 @@
 }
 
 .firmFacts .firmFactCard {
-    padding: 1rem;
+    padding: 1rem; 
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
@@ -67,11 +67,11 @@
 
 @media (max-width: 1680px) {
     .firmFacts-wrapper {
-        padding: 1.5rem;
+        padding: 1.5rem; 
     }
 
     .firmFacts-title {
-        font-size: 1.75rem;
+        font-size: 1.75rem; 
     }
 
     .firmFacts {
@@ -88,7 +88,7 @@
     }
 
     .firmFacts-title {
-        font-size: 1.5rem;
+        font-size: 1.5rem; 
         margin-bottom: 1rem;
     }
 
@@ -106,6 +106,6 @@
     }
 
     .close-button {
-        font-size: 1.5rem;
+        font-size: 1.5rem; 
     }
 }
