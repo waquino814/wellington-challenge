@@ -6,7 +6,13 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ### Project Description
 
-This project features a dynamic layout, with responsive components designed using React and SCSS. The layout includes a series of cards, and the page adapts based on screen sizes. The buttons within the cards have varying effects based on their content (e.g., hover effects and disabled states).
+This is a **React-based web application** designed with a responsive layout and interactive components using **React** and **SCSS**. The application features a dynamic layout with a series of cards, which adjust to different screen sizes. The layout includes various effects such as hover changes, disabled buttons, and text wrapping for dynamic content within the cards. It is aimed at displaying "Firm Facts" in an interactive and user-friendly manner, with a focus on responsiveness for different screen sizes.
+
+### Features:
+- Responsive layout that adapts to screen sizes from 768px to 1680px.
+- Two variants of cards with different hover and border effects.
+- Interactive buttons with disabled states and text wrapping.
+- Clean and modern user interface.
 
 ## Available Scripts
 
