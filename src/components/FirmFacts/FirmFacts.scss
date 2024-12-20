@@ -75,7 +75,7 @@
     }
 
     .firmFacts {
-        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: repeat(4, 1fr);
         grid-template-areas:
             "main-card card2 card3"
             "main-card card5 card7";
@@ -102,7 +102,7 @@
             "card5"
             "card6"
             "card7";
-        grid-gap: 1.5rem;
+        grid-gap: 1rem;
     }
 
     .close-button {
