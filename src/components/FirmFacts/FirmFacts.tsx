@@ -12,7 +12,7 @@ interface Card {
 }
 
 const FirmFacts: React.FC = () => {
-  const cards: Card[] = [
+  const initialCards: Card[] = [
     { variant: 'border', buttonText: 'This is a two line button that terminates with ...', icon: true },
     { variant: 'default', buttonText: 'This is a two line button that terminates with ...', icon: true },
     { variant: 'border', buttonText: 'This is a one line button', icon: false },
@@ -29,14 +29,10 @@ const FirmFacts: React.FC = () => {
         <button className="close-button">X</button>
       </div>
       <div className="firmFacts">
-        {cards.map((card, index) => (
+        {initialCards.map((card, index) => (
           <FirmFactCard
             key={index}
-            variant={card.variant}
-            buttonText={card.buttonText}
-            icon={card.icon}
-            disabledButton={card.disabledButton}
-            text={card.text}
+            {...card}
             isTwoLine={card.buttonText.includes('...')}
           />
         ))}

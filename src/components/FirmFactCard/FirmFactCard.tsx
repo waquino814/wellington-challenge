@@ -16,7 +16,7 @@ const FirmFactCard: React.FC<FirmFactCardProps> = ({ text, variant, buttonText, 
     <div className={`firmFactCard ${variant}`}>
       <div className="card-content">
         <Button text={buttonText} icon={icon} isTwoLine={isTwoLine} disabled={disabledButton}/>
-        {text && <div className="card-text">{text}</div>} {/* Centered text below button */}
+        {text && <div className="card-text">{text}</div>} {}
       </div>
     </div>
   );
